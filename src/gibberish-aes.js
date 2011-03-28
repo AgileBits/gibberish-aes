@@ -203,7 +203,7 @@ var GibberishAES = (function(){
             plainBlocks[i] = (i === 0) ? xorBlocks(plainBlocks[i], iv) : xorBlocks(plainBlocks[i], cipherBlocks[i - 1]);
         }
         for (i = 0; i < numBlocks - 1; i++) {
-            string += block2s(plainBlocks[i]);
+            string += block2s(plainBlocks[i], false);
         }
         string += block2s(plainBlocks[i], true);
         return binary ? string : dec_utf8(string); 
