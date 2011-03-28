@@ -835,7 +835,7 @@ var GibberishAES = (function(){
             var flatArr = [],
             b64 = '',
             i,
-            broken_b64;
+            broken_b64,
             totalChunks = Math.floor(b.length * 16 / 3);
             for (i = 0; i < b.length * 16; i++) {
                 flatArr.push(b[Math.floor(i / 16)][i % 16]);
